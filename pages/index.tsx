@@ -9,13 +9,8 @@ export default function Page() {
         <meta
           name="og:image"
           content={
-            // Because OG images must have a absolute URL, we use the
-            // `VERCEL_URL` environment variable to get the deployment’s URL.
-            // More info:
-            // https://vercel.com/docs/concepts/projects/environment-variables
-            `${
-              process.env.VERCEL_URL ? 'https://' + process.env.VERCEL_URL : ''
-            }/api/dynamic-image?username=vercel`
+            
+            `https://og-fix.vercel.app/api/dynamic-image?username=vercel`
           }
         />
       </Head>
