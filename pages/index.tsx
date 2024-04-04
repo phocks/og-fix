@@ -8,9 +8,8 @@ export default function Page() {
         <meta name="og:description" content="Vercel Edge Network" />
         <meta
           name="og:image"
-          content={
-            
-            `https://og-fix.vercel.app/api/dynamic-image?username=vercel`
+          content={ 
+            `https://ogto.vercel.app/api/dynamic-image?username=vercel`
           }
         />
       </Head>
