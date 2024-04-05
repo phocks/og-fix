@@ -9,7 +9,7 @@ export default function Page() {
         <meta
           name="og:image"
           content={ 
-            `https://ogto.vercel.app/api/dynamic-image?username=vercel`
+            `https://ogto.vercel.app/api/external?url=https://www.theguardian.com/world/2024/apr/05/israeli-inquiry-blames-wck-aid-killings-on-grave-errors-by-military-personnel`
           }
         />
       </Head>

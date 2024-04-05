@@ -7,9 +7,10 @@ export const config = {
  
 export default async function handler(request: NextRequest) {
   const { searchParams } = request.nextUrl;
-  const username = searchParams.get('username');
-  if (!username) {
-    return new ImageResponse(<>Visit with &quot;?username=vercel&quot;</>, {
+  const url = searchParams.get('url');
+
+  if (!url) {
+    return new ImageResponse(<>Visit with &quot;?url=https://example.org&quot;</>, {
       width: 1200,
       height: 630,
     });
@@ -25,21 +26,19 @@ export default async function handler(request: NextRequest) {
           background: '#f6f6f6',
           width: '100%',
           height: '100%',
-          paddingTop: 50,
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
         }}
       >
         <img
-          width="256"
-          height="256"
-          src={`https://github.com/${username}.png`}
+          width="1200"
+          height="630"
+          src={`https://i.guim.co.uk/img/media/2caa54def70d6082b5a48a44084d9bf73d8d706a/0_120_2880_1728/master/2880.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=773ee5b3dc11b6f4582dff953eba5465`}
           style={{
             borderRadius: 128,
           }}
         />
-        <p>github.com/{username}</p>
       </div>
     ),
     {
