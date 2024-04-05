@@ -18,8 +18,7 @@ export default function Page({ ogImage, ogTitle, ogDescription, targetUrl }) {
           name="og:image"
           content={`https://ogto.vercel.app/api/external?url=${ogImage}`}
         />
-        Redirect immediately to the target URL
-        <meta httpEquiv="refresh" content={`0;url=${targetUrl}`} />
+        {/* <meta httpEquiv="refresh" content={`0;url=${targetUrl}`} /> */}
       </Head>
       <h1>...</h1>
     </div>
